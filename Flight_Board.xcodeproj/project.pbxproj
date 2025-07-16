@@ -6,14 +6,65 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		AD50E3762E285F440051E499 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD50E3752E285F440051E499 /* WidgetKit.framework */; };
+		AD50E3782E285F440051E499 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD50E3772E285F440051E499 /* SwiftUI.framework */; };
+		AD50E3892E285F460051E499 /* Flight_BoardWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = AD50E3732E285F440051E499 /* Flight_BoardWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AD50E3872E285F460051E499 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD50E3532E285EA90051E499 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD50E3722E285F440051E499;
+			remoteInfo = Flight_BoardWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AD50E38A2E285F460051E499 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				AD50E3892E285F460051E499 /* Flight_BoardWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		AD50E35B2E285EA90051E499 /* Flight_Board.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flight_Board.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD50E3732E285F440051E499 /* Flight_BoardWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Flight_BoardWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD50E3752E285F440051E499 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		AD50E3772E285F440051E499 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		AD50E38D2E285F460051E499 /* Exceptions for "Flight_BoardWidget" folder in "Flight_BoardWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = AD50E3722E285F440051E499 /* Flight_BoardWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		AD50E35D2E285EA90051E499 /* Flight_Board */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Flight_Board;
+			sourceTree = "<group>";
+		};
+		AD50E3792E285F440051E499 /* Flight_BoardWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				AD50E38D2E285F460051E499 /* Exceptions for "Flight_BoardWidget" folder in "Flight_BoardWidgetExtension" target */,
+			);
+			path = Flight_BoardWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,6 +77,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AD50E3702E285F440051E499 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD50E3782E285F440051E499 /* SwiftUI.framework in Frameworks */,
+				AD50E3762E285F440051E499 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -33,6 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				AD50E35D2E285EA90051E499 /* Flight_Board */,
+				AD50E3792E285F440051E499 /* Flight_BoardWidget */,
+				AD50E3742E285F440051E499 /* Frameworks */,
 				AD50E35C2E285EA90051E499 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +103,18 @@
 			isa = PBXGroup;
 			children = (
 				AD50E35B2E285EA90051E499 /* Flight_Board.app */,
+				AD50E3732E285F440051E499 /* Flight_BoardWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		AD50E3742E285F440051E499 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD50E3752E285F440051E499 /* WidgetKit.framework */,
+				AD50E3772E285F440051E499 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +127,12 @@
 				AD50E3572E285EA90051E499 /* Sources */,
 				AD50E3582E285EA90051E499 /* Frameworks */,
 				AD50E3592E285EA90051E499 /* Resources */,
+				AD50E38A2E285F460051E499 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AD50E3882E285F460051E499 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				AD50E35D2E285EA90051E499 /* Flight_Board */,
@@ -69,6 +143,28 @@
 			productName = Flight_Board;
 			productReference = AD50E35B2E285EA90051E499 /* Flight_Board.app */;
 			productType = "com.apple.product-type.application";
+		};
+		AD50E3722E285F440051E499 /* Flight_BoardWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD50E38E2E285F460051E499 /* Build configuration list for PBXNativeTarget "Flight_BoardWidgetExtension" */;
+			buildPhases = (
+				AD50E36F2E285F440051E499 /* Sources */,
+				AD50E3702E285F440051E499 /* Frameworks */,
+				AD50E3712E285F440051E499 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				AD50E3792E285F440051E499 /* Flight_BoardWidget */,
+			);
+			name = Flight_BoardWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = Flight_BoardWidgetExtension;
+			productReference = AD50E3732E285F440051E499 /* Flight_BoardWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +177,9 @@
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
 					AD50E35A2E285EA90051E499 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					AD50E3722E285F440051E499 = {
 						CreatedOnToolsVersion = 16.4;
 					};
 				};
@@ -100,12 +199,20 @@
 			projectRoot = "";
 			targets = (
 				AD50E35A2E285EA90051E499 /* Flight_Board */,
+				AD50E3722E285F440051E499 /* Flight_BoardWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		AD50E3592E285EA90051E499 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD50E3712E285F440051E499 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +229,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AD50E36F2E285F440051E499 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AD50E3882E285F460051E499 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD50E3722E285F440051E499 /* Flight_BoardWidgetExtension */;
+			targetProxy = AD50E3872E285F460051E499 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		AD50E3642E285EAA0051E499 /* Debug */ = {
@@ -298,6 +420,58 @@
 			};
 			name = Release;
 		};
+		AD50E38B2E285F460051E499 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Flight_BoardWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Flight_BoardWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Never-Miss-Dev.Flight-Board.Flight-BoardWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AD50E38C2E285F460051E499 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Flight_BoardWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Flight_BoardWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Never-Miss-Dev.Flight-Board.Flight-BoardWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -315,6 +489,15 @@
 			buildConfigurations = (
 				AD50E3672E285EAA0051E499 /* Debug */,
 				AD50E3682E285EAA0051E499 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD50E38E2E285F460051E499 /* Build configuration list for PBXNativeTarget "Flight_BoardWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD50E38B2E285F460051E499 /* Debug */,
+				AD50E38C2E285F460051E499 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
